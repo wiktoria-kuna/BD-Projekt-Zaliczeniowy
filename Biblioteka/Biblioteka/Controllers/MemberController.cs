@@ -10,8 +10,7 @@ using Biblioteka.Models;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Biblioteka.Controllers
-{
-    [Authorize]
+{   
     public class MemberController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,12 +21,15 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Member
+        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Members.ToListAsync());
         }
 
         // GET: Member/Details/5
+
+        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,11 +48,14 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Member/Create
+
+        [Authorize(Roles = "Admin, User")]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin, User")]
         // POST: Member/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -67,6 +72,7 @@ namespace Biblioteka.Controllers
             return View(memberEntity);
         }
 
+        [Authorize(Roles = "Admin, User")]
         // GET: Member/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -119,6 +125,8 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Member/Delete/5
+
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
