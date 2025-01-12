@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\idk\\Studia\\bazy_danych\\projekt\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\idk\\Studia\\bazy_danych\\projekt\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\idk\\Studia\\bazy_danych\\projekt\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
         "projectName": "Biblioteka",
-        "projectPath": "C:\\Users\\user\\Desktop\\idk\\Studia\\bazy_danych\\projekt\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\idk\\Studia\\bazy_danych\\projekt\\Biblioteka\\Biblioteka\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,6 +65,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
             }
