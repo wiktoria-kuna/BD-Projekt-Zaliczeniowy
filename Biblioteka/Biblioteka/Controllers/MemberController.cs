@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteka.Data;
 using Biblioteka.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Biblioteka.Controllers
 {
+    [Authorize]
     public class MemberController : Controller
     {
         private readonly ApplicationDbContext _context;
