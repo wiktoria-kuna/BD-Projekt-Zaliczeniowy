@@ -1,6 +1,6 @@
 ﻿namespace Biblioteka.Models
 {
-    public class MemberEntity
+    public class MemberEntity //karta biblioteczna
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Biblioteka.Models
 {
-    public class CategoryEntity
+    public class CategoryEntity //kategoria książki
     {
         public int Id { get; set; }
         public string Name { get; set; }

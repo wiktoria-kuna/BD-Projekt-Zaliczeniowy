@@ -15,5 +15,6 @@ namespace Biblioteka.Data
         public DbSet<MemberEntity> Members {get; set;}
         public DbSet<BookEntity> Books {get; set;}
         public DbSet<CategoryEntity> Categories {get; set;}
+        public DbSet<BorrowEntity> BorrowedBooks {get; set;}
     }
 }

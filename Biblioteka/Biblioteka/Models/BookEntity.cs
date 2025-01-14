@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace Biblioteka.Models
+namespace Biblioteka.Models  
 {
-    public class BookEntity
+    public class BookEntity //książki, główna encja
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -11,6 +11,7 @@ namespace Biblioteka.Models
 
         public int CategoryId { get; set; }
 
-        public CategoryEntity Category { get; set; }
+        public CategoryEntity Category { get; set; } 
+        public BorrowEntity Borrow { get; set; }
     }
 }
