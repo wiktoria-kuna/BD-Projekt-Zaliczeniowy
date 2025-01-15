@@ -34,7 +34,14 @@ namespace Biblioteka.Data
              );
             //seed dla książek
             modelBuilder.Entity<BookEntity>().HasData(
-                new BookEntity { Id = 1, Title = "Lśnienie", Description = "Akcja powieści rozgrywa się w hotelu Panorama (ang. The Overlook), położonym wysoko w górach, gdzie Jack Torrance z żoną i małym synkiem ma zostać na zimę, by go doglądać. Jack ma duże problemy ze sobą i swoją twórczością (jest pisarzem), a jego syn Danny ma zdolności parapsychiczne (zdolność lśnienia), dzięki którym widzi wiele makabrycznych scen, odgrywających się przed laty w opuszczonym hotelu. Obaj wraz z ojcem wyczuwają, że w Panoramie nie są sami.", Author = "Stephen King", CategoryId = 1 });
+                new BookEntity 
+                { 
+                    Id = 1,
+                    Title = "Lśnienie", 
+                    Description = "Akcja powieści rozgrywa się w hotelu Panorama (ang. The Overlook), położonym wysoko w górach, gdzie Jack Torrance z żoną i małym synkiem ma zostać na zimę, by go doglądać. Jack ma duże problemy ze sobą i swoją twórczością (jest pisarzem), a jego syn Danny ma zdolności parapsychiczne (zdolność lśnienia), dzięki którym widzi wiele makabrycznych scen, odgrywających się przed laty w opuszczonym hotelu. Obaj wraz z ojcem wyczuwają, że w Panoramie nie są sami.", 
+                    Author = "Stephen King", 
+                    CategoryId = 1 
+                });
         }       
     }
 }

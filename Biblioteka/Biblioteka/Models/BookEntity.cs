@@ -13,11 +13,10 @@ namespace Biblioteka.Models
         public string Author { get; set; }
 
         public int CategoryId { get; set; } //klucz obcy 
+        [ValidateNever]
         public virtual ICollection<OrderEntity> Orders { get; set; } //relacja z wypożyczaniem
         [ValidateNever]
         public virtual CategoryEntity Category { get; set; } //właściwość nawigacyjna z kategorią
-
-        
 
     }
 }

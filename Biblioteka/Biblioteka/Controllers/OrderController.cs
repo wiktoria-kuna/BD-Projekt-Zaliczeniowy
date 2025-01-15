@@ -10,23 +10,23 @@ using Biblioteka.Models;
 
 namespace Biblioteka.Controllers
 {
-    public class BookController : Controller
+    public class OrderController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public BookController(ApplicationDbContext context)
+        public OrderController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Book
+        // GET: Order
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Books.Include(b => b.Category);
+            var applicationDbContext = _context.Orders.Include(o => o.Book);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Book/Details/5
+        // GET: Order/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,46 +34,44 @@ namespace Biblioteka.Controllers
                 return NotFound();
             }
 
-            var bookEntity = await _context.Books
-                .Include(b => b.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (bookEntity == null)
+            var orderEntity = await _context.Orders.Include(o => o.Book).FirstOrDefaultAsync(m => m.Id == id);
+            if (orderEntity == null)
             {
                 return NotFound();
             }
 
-            return View(bookEntity);
+            return View(orderEntity);
         }
 
-        // GET: Book/Create
+        // GET: Order/Create
         public IActionResult Create()
-        {
-            var categories = _context.Categories.ToList();
-            ViewBag.CategoriesId = new SelectList(categories, "Id", "Name");
+        {           
+            var books = _context.Books.Include(b => b.Orders).ToList();
 
+            ViewBag.Books = new SelectList(books, "Id", "Title");
             return View();
         }
 
-        // POST: Book/Create
+        // POST: Order/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,CategoryId")] BookEntity bookEntity)
+        public async Task<IActionResult> Create([Bind("BookId, BorrowDate, ReturnDate")] OrderEntity orderEntity)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(bookEntity);
+                _context.Orders.Add(orderEntity);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            var categories = _context.Categories.ToList();
-            ViewBag.CategoriesId = new SelectList(categories, "Id", "Name");
-
-            return View(bookEntity);
+                return RedirectToAction(nameof(Index));  
+            } 
+            
+            var books = _context.Books.Include(b => b.Orders).ToList();
+            ViewBag.Books = new SelectList(books, "Id", "Title");
+            return View(orderEntity);
         }
 
-        // GET: Book/Edit/5
+        // GET: Order/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,23 +79,24 @@ namespace Biblioteka.Controllers
                 return NotFound();
             }
 
-            var bookEntity = await _context.Books.FindAsync(id);
-            if (bookEntity == null)
+            var orderEntity = await _context.Orders.FindAsync(id);
+            if (orderEntity == null)
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", bookEntity.CategoryId);
-            return View(bookEntity);
+            var books = _context.Books.Include(b => b.Orders).ToList();
+            ViewBag.Books = new SelectList(books, "Id", "Title");
+            return View(orderEntity);
         }
 
-        // POST: Book/Edit/5
+        // POST: Order/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Author,CategoryId")] BookEntity bookEntity)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,BorrowDate,ReturnDate,BookId")] OrderEntity orderEntity)
         {
-            if (id != bookEntity.Id)
+            if (id != orderEntity.Id)
             {
                 return NotFound();
             }
@@ -106,12 +105,14 @@ namespace Biblioteka.Controllers
             {
                 try
                 {
-                    _context.Update(bookEntity);
+                    orderEntity.Id = id;
+
+                    _context.Update(orderEntity);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BookEntityExists(bookEntity.Id))
+                    if (!OrderEntityExists(orderEntity.Id))
                     {
                         return NotFound();
                     }
@@ -122,11 +123,12 @@ namespace Biblioteka.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", bookEntity.CategoryId);
-            return View(bookEntity);
+            var books = _context.Books.Include(b => b.Orders).ToList();
+            ViewBag.Books = new SelectList(books, "Id", "Id");
+            return View(orderEntity);
         }
 
-        // GET: Book/Delete/5
+        // GET: Order/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,35 +136,35 @@ namespace Biblioteka.Controllers
                 return NotFound();
             }
 
-            var bookEntity = await _context.Books
-                .Include(b => b.Category)
+            var orderEntity = await _context.Orders
+                .Include(o => o.Book)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (bookEntity == null)
+            if (orderEntity == null)
             {
                 return NotFound();
             }
 
-            return View(bookEntity);
+            return View(orderEntity);
         }
 
-        // POST: Book/Delete/5
+        // POST: Order/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var bookEntity = await _context.Books.FindAsync(id);
-            if (bookEntity != null)
+            var orderEntity = await _context.Orders.FindAsync(id);
+            if (orderEntity != null)
             {
-                _context.Books.Remove(bookEntity);
+                _context.Orders.Remove(orderEntity);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BookEntityExists(int id)
+        private bool OrderEntityExists(int id)
         {
-            return _context.Books.Any(e => e.Id == id);
+            return _context.Orders.Any(e => e.Id == id);
         }
     }
 }
