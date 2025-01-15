@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Biblioteka.Controllers
 {
-    //[Authorize(Roles="Admin")]
+    [Authorize(Roles="Admin")]
     public class AppRolesController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -13,7 +13,7 @@ namespace Biblioteka.Controllers
         {
             _roleManager = roleManager;
         }
-        //wyświetla wszystkie stworzone role
+
         public IActionResult Index()
         {
             var roles = _roleManager.Roles;
@@ -28,7 +28,7 @@ namespace Biblioteka.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(IdentityRole model)
         {
-            //sprawdza czy rola jest już stworzona
+            
             if (!_roleManager.RoleExistsAsync(model.Name).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(model.Name)).GetAwaiter().GetResult();
