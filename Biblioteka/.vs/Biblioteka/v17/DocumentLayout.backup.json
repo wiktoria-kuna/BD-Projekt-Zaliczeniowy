@@ -3,30 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\views\\member\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\views\\member\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\controllers\\approlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\controllers\\approlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\models\\memberentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\models\\memberentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\models\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\models\\bookentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\models\\categoryentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\models\\borrowentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\models\\borrowentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\models\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\models\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|c:\\users\\user\\source\\repos\\bd-projekt-zaliczeniowy\\biblioteka\\biblioteka\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57047FE0-3DF3-4BE0-9F8E-E3B69CDA10EB}|Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,34 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Views\\Member\\Create.cshtml",
-              "RelativeDocumentMoniker": "Biblioteka\\Views\\Member\\Create.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Views\\Member\\Create.cshtml",
-              "RelativeToolTip": "Biblioteka\\Views\\Member\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T09:32:30.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Controllers\\MemberController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "Biblioteka\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:30:34.067Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -81,113 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Biblioteka\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "OrderEntity.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\OrderEntity.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Models\\OrderEntity.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\OrderEntity.cs*",
+              "RelativeToolTip": "Biblioteka\\Models\\OrderEntity.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:30:36.562Z",
+              "WhenOpened": "2025-01-15T09:28:06.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Biblioteka\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:30:01.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppRolesController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\AppRolesController.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Controllers\\AppRolesController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\AppRolesController.cs",
-              "RelativeToolTip": "Biblioteka\\Controllers\\AppRolesController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:29:58.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BorrowEntity.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\BorrowEntity.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Models\\BorrowEntity.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\BorrowEntity.cs",
-              "RelativeToolTip": "Biblioteka\\Models\\BorrowEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T09:23:35.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MemberEntity.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\MemberEntity.cs",
-              "RelativeDocumentMoniker": "Biblioteka\\Models\\MemberEntity.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\MemberEntity.cs",
-              "RelativeToolTip": "Biblioteka\\Models\\MemberEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T22:12:13.041Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "265d15d2-e61a-4619-a7ef-b5d4968fbe43",
-        "Display": 1,
-        "X": -177,
-        "Y": 0,
-        "Width": 1555,
-        "Height": 794,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "CategoryEntity.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\CategoryEntity.cs",
               "RelativeDocumentMoniker": "Biblioteka\\Models\\CategoryEntity.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\CategoryEntity.cs",
               "RelativeToolTip": "Biblioteka\\Models\\CategoryEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T22:27:39.138Z",
+              "WhenOpened": "2025-01-15T09:25:35.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "BookEntity.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\BookEntity.cs",
               "RelativeDocumentMoniker": "Biblioteka\\Models\\BookEntity.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Models\\BookEntity.cs",
               "RelativeToolTip": "Biblioteka\\Models\\BookEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T22:25:32.694Z",
+              "WhenOpened": "2025-01-15T09:21:12.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BD-Projekt-Zaliczeniowy\\Biblioteka\\Biblioteka\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Biblioteka\\Controllers\\BookController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T09:20:38.242Z",
               "EditorCaption": ""
             }
           ]

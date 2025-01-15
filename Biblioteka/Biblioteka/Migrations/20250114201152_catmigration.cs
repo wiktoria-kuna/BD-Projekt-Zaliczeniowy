@@ -5,7 +5,7 @@
 namespace Biblioteka.Migrations
 {
     /// <inheritdoc />
-    public partial class NewUserRegistrationColumns : Migration
+    public partial class catmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

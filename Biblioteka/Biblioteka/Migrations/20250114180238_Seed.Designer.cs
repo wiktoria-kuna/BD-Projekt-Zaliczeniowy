@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Biblioteka.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250112223004_AddingEntities")]
-    partial class AddingEntities
+    [Migration("20250114180238_Seed")]
+    partial class Seed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,16 @@ namespace Biblioteka.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Author = "Stephen King",
+                            CategoryId = 1,
+                            Description = "Akcja powieści rozgrywa się w hotelu Panorama (ang. The Overlook), położonym wysoko w górach, gdzie Jack Torrance z żoną i małym synkiem ma zostać na zimę, by go doglądać. Jack ma duże problemy ze sobą i swoją twórczością (jest pisarzem), a jego syn Danny ma zdolności parapsychiczne (zdolność lśnienia), dzięki którym widzi wiele makabrycznych scen, odgrywających się przed laty w opuszczonym hotelu. Obaj wraz z ojcem wyczuwają, że w Panoramie nie są sami.",
+                            Title = "Lśnienie"
+                        });
                 });
 
             modelBuilder.Entity("Biblioteka.Models.CategoryEntity", b =>
@@ -74,6 +84,62 @@ namespace Biblioteka.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Książki o przerażających historiach, duchach i nadprzyrodzonych wydarzeniach.",
+                            Name = "Horror"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Literatura pełna magii, mitologii i wyimaginowanych światów.",
+                            Name = "Fantastyka"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Historie o detektywach, tajemnicach i zagadkach kryminalnych.",
+                            Name = "Kryminał"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Opowieści o miłości, relacjach i emocjach.",
+                            Name = "Romans"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Książki o przyszłości, technologii i kosmosie.",
+                            Name = "Science Fiction"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Życiorysy znanych osób, opowiadające o ich życiu i osiągnięciach.",
+                            Name = "Biografia"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "Powieści osadzone w przeszłości, często z elementami historycznymi.",
+                            Name = "Historyczna"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Książki pełne akcji, odkryć i ekscytujących podróży.",
+                            Name = "Przygodowa"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "Historie pełne napięcia, z zaskakującymi zwrotami akcji.",
+                            Name = "Thriller"
+                        });
                 });
 
             modelBuilder.Entity("Biblioteka.Models.MemberEntity", b =>
@@ -103,6 +169,32 @@ namespace Biblioteka.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Members");
+                });
+
+            modelBuilder.Entity("Biblioteka.Models.OrderEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BorrowDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReturnDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -318,6 +410,17 @@ namespace Biblioteka.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Biblioteka.Models.OrderEntity", b =>
+                {
+                    b.HasOne("Biblioteka.Models.BookEntity", "Book")
+                        .WithMany("Orders")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -367,6 +470,11 @@ namespace Biblioteka.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Biblioteka.Models.BookEntity", b =>
+                {
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("Biblioteka.Models.CategoryEntity", b =>
