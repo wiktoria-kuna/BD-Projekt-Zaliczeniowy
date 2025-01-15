@@ -1,6 +1,6 @@
 ﻿namespace Biblioteka.Models
 {
-    public class MemberEntity //karta biblioteczna
+    public class MemberEntity //lista pracowników
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

@@ -21,7 +21,6 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Member
-        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Members.ToListAsync());
@@ -49,13 +48,11 @@ namespace Biblioteka.Controllers
 
         // GET: Member/Create
 
-        [Authorize(Roles = "Admin, User")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
-
-        [Authorize(Roles = "Admin, User")]
         // POST: Member/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -72,7 +69,7 @@ namespace Biblioteka.Controllers
             return View(memberEntity);
         }
 
-        [Authorize(Roles = "Admin, User")]
+        [Authorize(Roles = "Admin")]
         // GET: Member/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
