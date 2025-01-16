@@ -11,9 +11,9 @@
 `add-migration "nazwa" `\
 `update-database`
 ### Przykładowi użytkownicy ###
-- Admin:
-  Email: admin@admin.com
-  Hasło: Admin!1
-- Użytkownik:
-  Email: user@user,cin
-  Hasło: User!1
+- **Admin**:\
+  Email: `admin@admin.com`\
+  Hasło: `Admin!1`
+- **Użytkownik**:\
+  Email: `user@user.com`\
+  Hasło: `User!1`
