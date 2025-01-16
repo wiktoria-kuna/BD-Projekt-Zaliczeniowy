@@ -26,7 +26,7 @@ namespace Biblioteka.Controllers
             var applicationDbContext = _context.Orders.Include(o => o.Book);
             return View(await applicationDbContext.ToListAsync());
         }
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Użytkownik")]
         // GET: Order/Details/5
         public async Task<IActionResult> Details(int? id)
         {
