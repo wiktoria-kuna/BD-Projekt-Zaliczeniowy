@@ -8,10 +8,8 @@
 - SQL Server Managament Studio 20
 - .NET 9.0
 ### Utworzenie bazy danych ###
-```
-add-migration "nazwa" 
-update-database
-```
+`add-migration "nazwa" `\
+`update-database`
 ### Przykładowi użytkownicy ###
 - Admin:
   Email: admin@admin.com
