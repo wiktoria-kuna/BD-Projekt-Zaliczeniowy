@@ -19,14 +19,14 @@ namespace Biblioteka.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles = "Admin, Użytkownik")]
         // GET: Order
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Orders.Include(o => o.Book);
             return View(await applicationDbContext.ToListAsync());
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: Order/Details/5
         public async Task<IActionResult> Details(int? id)
         {

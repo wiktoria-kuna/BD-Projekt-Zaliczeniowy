@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Biblioteka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2c81123ff92b8f2bee77af89b8fc7a691c4273a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+284c19edf68fe37cf6b205d2bd8c190dd5d0e133")]
 [assembly: System.Reflection.AssemblyProductAttribute("Biblioteka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Biblioteka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
