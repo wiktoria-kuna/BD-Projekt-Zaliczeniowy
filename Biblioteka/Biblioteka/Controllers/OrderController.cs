@@ -73,7 +73,7 @@ namespace Biblioteka.Controllers
             return View(orderEntity);
         }
 
-        [Authorize(Roles = "Admin, Użytkownik")]
+        [Authorize(Roles = "Admin")]
         // GET: Order/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

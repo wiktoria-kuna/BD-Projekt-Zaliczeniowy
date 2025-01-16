@@ -81,6 +81,14 @@ namespace Biblioteka.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
+            [Display(Name = "Imię")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Nazwisko")]
+            public string LastName { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -105,7 +113,7 @@ namespace Biblioteka.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             [Required]        
-            public string Role { get; set; }
+            public string? Role { get; set; }
 
             [ValidateNever]
             public IEnumerable<SelectListItem> RoleList { get; set; }
@@ -137,6 +145,9 @@ namespace Biblioteka.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
@@ -178,11 +189,11 @@ namespace Biblioteka.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser() 
+        private ApplicationUser CreateUser() 
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<ApplicationUser>();
             }
             catch
             {

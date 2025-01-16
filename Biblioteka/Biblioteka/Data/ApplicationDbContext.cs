@@ -12,6 +12,7 @@ namespace Biblioteka.Data
 
         }
 
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<MemberEntity> Members {get; set;}
         public DbSet<OrderEntity> Orders { get; set; }
         public DbSet<BookEntity> Books {get; set;}
