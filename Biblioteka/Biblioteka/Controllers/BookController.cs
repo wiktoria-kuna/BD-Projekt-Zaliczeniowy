@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteka.Data;
 using Biblioteka.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Biblioteka.Controllers
 {
@@ -46,6 +47,7 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Book/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             var categories = _context.Categories.ToList();
@@ -74,6 +76,7 @@ namespace Biblioteka.Controllers
         }
 
         // GET: Book/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -125,7 +128,7 @@ namespace Biblioteka.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", bookEntity.CategoryId);
             return View(bookEntity);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: Book/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

@@ -11,9 +11,10 @@ namespace Biblioteka.Models
         public DateTime BorrowDate { get; set; }
 
         [Display(Name = "Data oddania")]
-        public DateTime? ReturnDate { get; set; } 
+        public DateTime? ReturnDate { get; set; }
 
         //klucz obcy
+        [Display(Name = "Książka")]
         public int BookId { get; set; } //klucz obcy
         [ValidateNever]
         [Display(Name = "Książka")]

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteka.Data;
 using Biblioteka.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Biblioteka.Controllers
 {
@@ -43,6 +44,7 @@ namespace Biblioteka.Controllers
             return View(orderEntity);
         }
 
+        [Authorize(Roles = "Admin, Użytkownik")]
         // GET: Order/Create
         public IActionResult Create()
         {           
@@ -71,6 +73,7 @@ namespace Biblioteka.Controllers
             return View(orderEntity);
         }
 
+        [Authorize(Roles = "Admin, Użytkownik")]
         // GET: Order/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -128,6 +131,7 @@ namespace Biblioteka.Controllers
             return View(orderEntity);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Order/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

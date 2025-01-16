@@ -28,7 +28,7 @@ namespace Biblioteka.Controllers
 
         // GET: Member/Details/5
 
-        [Authorize(Roles = "Admin, User")]
+        [Authorize(Roles = "Admin, Użytkownik")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

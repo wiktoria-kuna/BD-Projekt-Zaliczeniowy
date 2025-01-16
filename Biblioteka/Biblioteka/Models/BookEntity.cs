@@ -18,6 +18,7 @@ namespace Biblioteka.Models
         [Display(Name = "Autor")]
         public string Author { get; set; }
 
+        [Display(Name = "Kategoria")]
         public int CategoryId { get; set; } //klucz obcy 
         [ValidateNever]
         public virtual ICollection<OrderEntity> Orders { get; set; } //relacja z wypożyczaniem
